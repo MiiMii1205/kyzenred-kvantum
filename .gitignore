@@ -42,5 +42,3 @@
 .nfs*
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,code,kdiff3,kdevelop4
-inkscape.log
-src/gtk2-assets.svg
