@@ -23,8 +23,8 @@ To find out how to change your KDE color scheme, [click here](https://docs.kde.o
 ### Regenerate the Kvantum assets
 Generating the GUI assets for Kvantum is quite easy. 
 Go to the theme's directory with a terminal and execute the `kyzenred-generate.sh` script in the `scripts` directory like so:
-```bash
-    $ ./kyzenred-generate.sh 
+```sh
+./kyzenred-generate.sh 
 ```
 This usually takes no more than a second. To refresh Kvantum, you might want to either switch to another theme and back or log out and back in. 
 Remember to re-run this command every time you change your color scheme, otherwise you're in for a bumpy ride!
