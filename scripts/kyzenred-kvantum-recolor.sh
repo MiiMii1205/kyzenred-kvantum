@@ -2,7 +2,7 @@
 
 SVG_SRC_FILE="Kyzenred"
 SVG_SRC_FILE_EXT=".svg"
-STYLE_TAG_REPLACE="</metadata>";
+STYLE_TAG_REPLACE="(<style(\s|\S)*?id=\"current-color-scheme\"(\s|\S)*?<\/style>)";
 STYLESHEET_FILE="../src/recolor.css"
 
 FULL_GTK2_IN_SCR_FILE="../src/$SVG_SRC_FILE-in$SVG_SRC_FILE_EXT"
@@ -84,13 +84,13 @@ if [ -e $STYLESHEET_FILE ]; then
         tr '\t' ' '
     )
     
-    STYLESHEET="</metadata><style>$STYLESHEET</style>";
+    STYLESHEET="<style id=\"­current-color-scheme\">$STYLESHEET</style>";
     
     echo Refreshing SVGs...
     cp -f $FULL_GTK2_IN_SCR_FILE $FULL_GTK2_OUT_SCR_FILE && sleep 1
     
     echo "Inserting CSS <style> code..."
-    sed -i "s|$STYLE_TAG_REPLACE|$STYLESHEET|" $FULL_GTK2_OUT_SCR_FILE
+    sed -i "s@$STYLE_TAG_REPLACE@$STYLESHEET@" $FULL_GTK2_OUT_SCR_FILE
     
     echo SVG file generated!
 else
