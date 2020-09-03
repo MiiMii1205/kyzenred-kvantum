@@ -1,6 +1,6 @@
  # Kyzenred Hacking
 
-So you want to extend the theme, yes? First up, let's talk about what you'll need
+So you want to extend the theme, yes? First up, let's talk about what you'll need!
 
 first, you need to know that Kvantum is a pure SVG engine. This means that if you want to change things you'll need to know how SVGs works, along with good HTML and CSS knowledge.
 
